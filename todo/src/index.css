@@ -1,0 +1,79 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  background-color: #7a7676;
+}
+
+.to-do-list{
+  text-align: center;
+  margin: 0 auto;
+}
+
+button{
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: rgb(250, 251, 250);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.add-btn{
+  background-color: #14ef1b;
+}
+.add-btn:hover{
+  background-color: #52e757;
+}
+
+.delete-btn{
+  background-color: #ef3514;
+}
+.delete-btn:hover{
+  background-color: #e34124;
+}
+
+.move-up{
+    background-color: #2e41f2;
+}
+.move-up:hover{
+    background-color: #4564ef;
+  }
+
+  .move-down{
+    background-color: #2e3ff2;
+    
+  }
+  .move-down:hover{
+  background-color: #4564ef;
+
+
+}
+
+input[type="text"] {
+  font-size: 1.4rem;
+  padding: 10px;
+
+}
+
+ol{
+  padding: 0;
+}
+
+li{
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #282525;
+  margin-bottom: 1.2rem;
+  color: white;
+}
+
+.text{
+  flex: 1;
+}
+
+.delete-btn, .move-btn{
+  padding: 8px 12px;
+}
