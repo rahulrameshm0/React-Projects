@@ -17,25 +17,49 @@ export const ExpenseForm = () => {
   const handleCategory = (event) => {
     setCategory(event.target.value);
   };
-  console.log(`Name: ${name}, Amount: ${amount}, Category: ${category}`)
-  
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const expense = {
+        name:name,
+        amount:amount,
+        category:category
+    };
+
+    console.log(expense)
+  };
+
+//   console.log(`Name: ${name}, Amount: ${amount}, Category: ${category}`);
   return (
     <div>
       <form action="">
-        <input type="text" name="name" id="name" onChange={handleNameChange} />
         <input
-          type="number"
+          type="text"
+          name="name"
+          id="name"
+          onChange={handleNameChange}
+          value={name}
+          placeholder="Enter your item name"
+        />
+        <input
+          type="text"
           name="amount"
           id="amount"
+          value={amount}
           onChange={handleAmountChange}
+          placeholder="Enter the amount"
         />
-        <select name="" id="" onChange={handleCategory}>
+        <select name="" id="" onChange={handleCategory} value={category}>
           <option value="Food">Food</option>
           <option value="Books">Books</option>
           <option value="Vegitables">Vegitables</option>
         </select>
-        <button className="add-btn">Submit</button>
+        <button className="add-btn" onClick={handleSubmit}>
+          Submit
+        </button>
       </form>
+
     </div>
   );
 };
