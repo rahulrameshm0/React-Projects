@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // Creating am expense form like name, item, category and amount
-export const ExpenseForm = () => {
+export const ExpenseForm = ({ addExpense }) => {
   const [name, setName] = useState("");
   const [amount, setAmount] = useState(0);
   const [category, setCategory] = useState("");
@@ -22,15 +22,18 @@ export const ExpenseForm = () => {
     event.preventDefault();
 
     const expense = {
-        name:name,
-        amount:amount,
-        category:category
+      name: name,
+      amount: amount,
+      category: category,
     };
 
-    console.log(expense)
+    addExpense(expense)
+
+    console.log(expense);
   };
 
-//   console.log(`Name: ${name}, Amount: ${amount}, Category: ${category}`);
+
+  //   console.log(`Name: ${name}, Amount: ${amount}, Category: ${category}`);
   return (
     <div>
       <form action="">
@@ -59,7 +62,6 @@ export const ExpenseForm = () => {
           Submit
         </button>
       </form>
-
     </div>
   );
 };
