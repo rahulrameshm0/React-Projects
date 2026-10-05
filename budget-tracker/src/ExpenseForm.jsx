@@ -3,7 +3,7 @@ import { useState } from "react";
 // Creating am expense form like name, item, category and amount
 export const ExpenseForm = ({ addExpense }) => {
   const [name, setName] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
   const [category, setCategory] = useState("");
 
   const handleNameChange = (event) => {
@@ -27,11 +27,10 @@ export const ExpenseForm = ({ addExpense }) => {
       category: category,
     };
 
-    addExpense(expense)
+    addExpense(expense);
 
     console.log(expense);
   };
-
 
   //   console.log(`Name: ${name}, Amount: ${amount}, Category: ${category}`);
   return (
