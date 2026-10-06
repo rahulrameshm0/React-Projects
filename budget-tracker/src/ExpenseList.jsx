@@ -1,4 +1,8 @@
 export const ExpenseList = ({ expense, deleteExpense }) => {
+  const total = expense.reduce((sum, item) => {
+    return sum + Number(item.amount);
+  }, 0);
+
   return (
     <div>
       <table border={1} style={{ textAlign: "center" }}>
@@ -26,6 +30,8 @@ export const ExpenseList = ({ expense, deleteExpense }) => {
           })}
         </tbody>
       </table>
+
+      <h3>Total: {total}</h3>
     </div>
   );
 };
