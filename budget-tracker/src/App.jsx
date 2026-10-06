@@ -10,11 +10,15 @@ function App() {
     setExpense([...expense, newExpense]);
   };
 
+  const deleteExpense = (id) => {
+    setExpense(expense.filter((item) => item.id !== id));
+  };
+
   return (
     <>
       <BudgetTracker />
       <ExpenseForm addExpense={addExpense} />
-      <ExpenseList expense={expense}/>
+      <ExpenseList expense={expense} deleteExpense={deleteExpense} />
     </>
   );
 }

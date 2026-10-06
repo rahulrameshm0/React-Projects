@@ -1,30 +1,31 @@
-import { ExpenseForm } from "./ExpenseForm";
-
-export const ExpenseList = ({ expense }) => {
+export const ExpenseList = ({ expense, deleteExpense }) => {
   return (
     <div>
-      {expense.map((item) => {
-        return (
-          <div key={item}>
-            <table border={1} style={{textAlign: "center"}}>
-              <thead>
-                <tr>
-                  <th>Item Name</th>
-                  <th>Item Price</th>
-                  <th>Category</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>{item.name}</td>
-                  <td>${item.amount}</td>
-                  <td>{item.category}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        );
-      })}
+      <table border={1} style={{ textAlign: "center" }}>
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Item Price</th>
+            <th>Category</th>
+            <th>Delete Item</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {expense.map((item) => {
+            return (
+              <tr key={item.id}>
+                <td>{item.name}</td>
+                <td>${item.amount}</td>
+                <td>{item.category}</td>
+                <td>
+                  <button onClick={() => deleteExpense(item.id)}>Delete</button>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 };

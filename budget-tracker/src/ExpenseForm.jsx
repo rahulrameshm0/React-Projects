@@ -25,6 +25,7 @@ export const ExpenseForm = ({ addExpense }) => {
       name: name,
       amount: amount,
       category: category,
+      id: Date.now(),
     };
 
     addExpense(expense);
