@@ -37,6 +37,7 @@ export const ExpenseForm = ({ addExpense }) => {
   return (
     <div>
       <form action="">
+        <label htmlFor="name">Item Name</label>
         <input
           type="text"
           name="name"
@@ -45,6 +46,7 @@ export const ExpenseForm = ({ addExpense }) => {
           value={name}
           placeholder="Enter your item name"
         />
+        <label htmlFor="amount">Amount</label>
         <input
           type="text"
           name="amount"
@@ -53,6 +55,7 @@ export const ExpenseForm = ({ addExpense }) => {
           onChange={handleAmountChange}
           placeholder="Enter the amount"
         />
+        <label htmlFor="category">Category</label>
         <select name="" id="" onChange={handleCategory} value={category}>
           <option value="Food">Food</option>
           <option value="Books">Books</option>
