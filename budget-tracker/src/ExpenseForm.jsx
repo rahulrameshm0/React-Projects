@@ -36,35 +36,44 @@ export const ExpenseForm = ({ addExpense }) => {
   //   console.log(`Name: ${name}, Amount: ${amount}, Category: ${category}`);
   return (
     <div>
-      <form action="">
-        <label htmlFor="name">Item Name</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          onChange={handleNameChange}
-          value={name}
-          placeholder="Enter your item name"
-        />
-        <label htmlFor="amount">Amount</label>
-        <input
-          type="text"
-          name="amount"
-          id="amount"
-          value={amount}
-          onChange={handleAmountChange}
-          placeholder="Enter the amount"
-        />
-        <label htmlFor="category">Category</label>
-        <select name="" id="" onChange={handleCategory} value={category}>
-          <option value="Food">Food</option>
-          <option value="Books">Books</option>
-          <option value="Vegitables">Vegitables</option>
-        </select>
-        <button className="add-btn" onClick={handleSubmit}>
-          Submit
-        </button>
-      </form>
+      <div className="form-input">
+        <form action="">
+          <div>
+            <label htmlFor="name">Item Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              onChange={handleNameChange}
+              value={name}
+              placeholder="Enter your item name"
+            />
+          </div>
+          <div>
+            <label htmlFor="amount">Amount</label>
+            <input
+              type="text"
+              name="amount"
+              id="amount"
+              value={amount}
+              onChange={handleAmountChange}
+              placeholder="Enter the amount"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="category">Category</label>
+            <select name="category" id="category" onChange={handleCategory} value={category}>
+              <option value="Food">Food</option>
+              <option value="Books">Books</option>
+              <option value="Vegitables">Vegitables</option>
+            </select>
+          </div>
+          <button className="add-btn" onClick={handleSubmit}>
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

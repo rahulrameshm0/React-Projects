@@ -1,7 +1,19 @@
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #aca9a9;
 }
 
+.form-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 50%;
+  margin: auto;
+  padding: 2rem;
+  box-shadow: 0.6rem 0.6rem 3rem 0.1rem #474545;
+  border-radius: 1rem;
+  margin-bottom: 2.4rem;
+}
 
 input {
   display: block;
@@ -9,11 +21,25 @@ input {
   outline: none;
   margin-top: 0.6rem;
   margin-bottom: 1rem;
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border-radius: 0.4rem;
+}
+
+input[type="text"] {
+  font-size: 1.2rem;
 }
 
 select {
-    display: block;
-    border: 1px solid black;
-    margin-top: 0.6rem;
-    margin-bottom: 1rem;
+  display: block;
+  border: 1px solid black;
+  margin-top: 0.6rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border-radius: 0.4rem;
+}
+
+.add-btn {
+  text-align: center;
 }
