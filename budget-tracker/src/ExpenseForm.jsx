@@ -30,6 +30,10 @@ export const ExpenseForm = ({ addExpense }) => {
 
     addExpense(expense);
 
+    setName("");
+    setAmount("");
+    setCategory("");
+
     console.log(expense);
   };
 
@@ -63,7 +67,12 @@ export const ExpenseForm = ({ addExpense }) => {
 
           <div>
             <label htmlFor="category">Category</label>
-            <select name="category" id="category" onChange={handleCategory} value={category}>
+            <select
+              name="category"
+              id="category"
+              onChange={handleCategory}
+              value={category}
+            >
               <option value="Food">Food</option>
               <option value="Books">Books</option>
               <option value="Vegitables">Vegitables</option>

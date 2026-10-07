@@ -31,7 +31,7 @@ export const ExpenseList = ({ expense, deleteExpense }) => {
         </tbody>
       </table>
 
-      <h3>Total: {total}</h3>
+      <h3 className="total-amount">Total: {total}</h3>
     </div>
   );
 };
