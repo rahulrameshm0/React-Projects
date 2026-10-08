@@ -52,8 +52,46 @@ table{
 
 td, th{
     border: 1px solid #000;
+    padding: 1rem;
 }
 
 .total-amount{
     text-align: center;
+}
+
+
+.add-btn{
+    border: none;
+    background-color: rgb(15, 224, 8);
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.add-btn:hover{
+    background-color: rgb(15, 224, 8);
+    transform: scale(1.2);
+}
+
+.del-btn{
+    border: none;
+    background-color: rgb(242, 13, 13);
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.del-btn:hover{
+    background-color: rgb(228, 56, 56);
+    transform: scale(1.2);
+}
+
+select{
+    border: 1px solid #000;
+    outline: none;
+    width: 120%;
 }

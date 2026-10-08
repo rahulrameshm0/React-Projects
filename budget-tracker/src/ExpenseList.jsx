@@ -23,7 +23,7 @@ export const ExpenseList = ({ expense, deleteExpense }) => {
                 <td>${item.amount}</td>
                 <td>{item.category}</td>
                 <td>
-                  <button onClick={() => deleteExpense(item.id)}>Delete</button>
+                  <button className="del-btn" onClick={() => deleteExpense(item.id)}>Delete</button>
                 </td>
               </tr>
             );
