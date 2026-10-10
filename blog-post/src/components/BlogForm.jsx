@@ -17,7 +17,8 @@ export const BlogForm = ({ addBlog }) => {
 
     const blog =  {
         title: title,
-        context: context
+        context: context,
+        id: Date.now()
     };
 
     addBlog(blog);

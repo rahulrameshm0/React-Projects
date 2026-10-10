@@ -1,6 +1,6 @@
 export const ExpenseList = ({ expense, deleteExpense }) => {
   const total = expense.reduce((sum, item) => {
-    return sum + Number(item.amount);
+     return sum + Number(item.amount);
   }, 0);
 
   return (
