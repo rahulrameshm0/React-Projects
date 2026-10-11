@@ -1,6 +1,6 @@
 export const ExpenseList = ({ expense, deleteExpense }) => {
   const total = expense.reduce((sum, item) => {
-     return sum + Number(item.amount);
+    return sum + Number(item.amount);
   }, 0);
 
   return (
@@ -23,7 +23,12 @@ export const ExpenseList = ({ expense, deleteExpense }) => {
                 <td>${item.amount}</td>
                 <td>{item.category}</td>
                 <td>
-                  <button className="del-btn" onClick={() => deleteExpense(item.id)}>Delete</button>
+                  <button
+                    className="del-btn"
+                    onClick={() => deleteExpense(item.id)}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             );

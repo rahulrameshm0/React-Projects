@@ -15,18 +15,18 @@ export const BlogForm = ({ addBlog }) => {
   const handleSubmitButton = (event) => {
     event.preventDefault();
 
-    const blog =  {
-        title: title,
-        context: context,
-        id: Date.now()
+    const blog = {
+      title: title,
+      context: context,
+      id: Date.now(),
     };
 
     addBlog(blog);
 
-    setTitle("")
-    setContext("")
+    setTitle("");
+    setContext("");
 
-    console.log(blog)
+    console.log(blog);
   };
 
   return (
@@ -35,9 +35,21 @@ export const BlogForm = ({ addBlog }) => {
       <p>Wright your thoughts and share it with everyone</p>
       <form>
         <label htmlFor="title">Title</label>
-        <input type="text" name="title" id="title" placeholder="Enter the title" onChange={titles} value={title}/>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Enter the title"
+          onChange={titles}
+          value={title}
+        />
         <label htmlFor="context">context</label>
-        <textarea name="context" id="context" value={context} onChange={contexts}></textarea>
+        <textarea
+          name="context"
+          id="context"
+          value={context}
+          onChange={contexts}
+        ></textarea>
 
         <button onClick={handleSubmitButton}>Submit</button>
       </form>
