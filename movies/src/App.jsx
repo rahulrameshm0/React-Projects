@@ -1,10 +1,10 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Navbar } from "./components/Navbar.jsx";
 
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>
@@ -12,3 +12,5 @@ function App() {
     </>
   );
 }
+
+export default App;
