@@ -8,6 +8,8 @@ export const Navbar = () => {
           <a href="#">Favorites</a>
         </div>
       </div>
+      <hr />
+    
     </div>
   );
 };
