@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import { Navbar } from "./components/Navbar.jsx";
+import { SearchBar } from "./components/SearchBar.jsx";
 
 import "./App.css";
 
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <SearchBar />
     </>
   );
 }
